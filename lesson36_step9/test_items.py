@@ -1,8 +1,8 @@
-import pytest
+from typing import Union
 from selenium import webdriver
 
 
-def test_add_to_cart_button(browser: webdriver.Chrome):
+def test_add_to_cart_button(browser: Union[webdriver.Chrome, webdriver.Firefox]):
     link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
     browser.get(link)
     browser.implicitly_wait(5)
